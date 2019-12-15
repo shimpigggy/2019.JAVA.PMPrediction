@@ -63,7 +63,7 @@ public class MLAlgorithmFold implements MLAlgoithm {
         }
     }
 
-    public void MultilayerPerceptronAlg() {
+    private void MultilayerPerceptronAlg() {
         try {
             MultilayerPerceptron multilayerPerceptron = new MultilayerPerceptron();
             multilayerPerceptron.setHiddenLayers(45 + "");
@@ -90,7 +90,7 @@ public class MLAlgorithmFold implements MLAlgoithm {
         }
     }
 
-    public void KNNAlg() {
+    private void KNNAlg() {
         try {
             IBk knn = new IBk(5);
 
@@ -124,7 +124,7 @@ public class MLAlgorithmFold implements MLAlgoithm {
         }
     }
 
-    public void RandomForestAlg() {
+    private void RandomForestAlg() {
         try {
             RandomForest randomForest = new RandomForest();
 
@@ -152,7 +152,7 @@ public class MLAlgorithmFold implements MLAlgoithm {
         }
     }
 
-    public void BaggingAlg() {
+    private void BaggingAlg() {
         try {
             Bagging bagging = new Bagging();
             LinearRegression linearRegression = new LinearRegression();

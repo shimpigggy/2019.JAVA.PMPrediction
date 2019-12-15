@@ -72,19 +72,21 @@ public class Train {
     /**
      * dataSet을 이용하여 K-fold로 실험 시작
      */
-    public void trainDataMLFold() {
+    private void trainDataMLFold() {
         MLAlgorithmFold MLAlgorithmBase = new MLAlgorithmFold(dataSet);
         MLAlgorithmBase.TrainMachineLearningPool();
 
-        selectClassifier(MLAlgorithmBase);
+//        selectClassifier(MLAlgorithmBase);
+        PrintOutput result = new PrintOutput(MLAlgorithmBase.getResult());
+        result.printAllData();
     }
 
     /**
      * 실험 후 MAE와 RMSE에 대한 각각 최소 값을 가진 alg 찾기
-     * @param mlAlgoithm 실험에 사용한 mlalg 이용
+     * @param mlAlgorithm 실험에 사용한 mlalg 이용
      * **/
     private void selectClassifier(MLAlgoithm mlAlgoithm) {
-        SelectAlg result = new SelectAlg(mlAlgoithm.getResult());
+        PrintOutput result = new PrintOutput(mlAlgoithm.getResult());
         result.printAllData();
 
         MAE = result.selectLowMAE();

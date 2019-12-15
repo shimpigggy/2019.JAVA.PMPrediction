@@ -4,7 +4,7 @@ import com.sejong.shim.DTO.ClassifierDTO;
 
 import java.util.ArrayList;
 
-public class SelectAlg {
+public class PrintOutput {
     private ArrayList<ClassifierDTO> value;
 
     /**
@@ -12,7 +12,7 @@ public class SelectAlg {
      *
      * @param value the value
      */
-    public SelectAlg(ArrayList<ClassifierDTO> value) {
+    public PrintOutput(ArrayList<ClassifierDTO> value) {
         this.value = value;
     }
 
@@ -22,8 +22,8 @@ public class SelectAlg {
     public void printAllData() {
         for (int i = 0; i < value.size(); i++) {
             System.out.println(value.get(i).getName());
-            System.out.println(String.format("%.5f",value.get(i).getMAE()));
-            System.out.println(String.format("%.5f\n",value.get(i).getRMSE()));
+            System.out.println(String.format("%.5f", value.get(i).getMAE()));
+            System.out.println(String.format("%.5f\n", value.get(i).getRMSE()));
         }
     }
 
